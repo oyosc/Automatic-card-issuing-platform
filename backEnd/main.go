@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
+	_ "automatic/backEnd/config"
 )
 
 func main() {
