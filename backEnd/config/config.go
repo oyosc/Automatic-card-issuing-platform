@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"regexp"
+	"automatic/backEnd/utils"
 )
 
 
@@ -43,7 +44,6 @@ var DBConfig dbConfig
 
 func initDB(){
 	utils.SetStructByJSON(&DBConfig, jsonData["database"].(map[string]interface{}))
-	portStr := fmt.Sprintf("%d", DBConfig.Port)
 	url := "host={host} user={user} dbname={dbname} sslmode=disable password={password}"
 	url = strings.Replace(url, "{dbname}", DBConfig.Database, -1)
 	url = strings.Replace(url, "{user}", DBConfig.User, -1)
@@ -55,6 +55,7 @@ func initDB(){
 
 func init(){
 	initJSON()
+	initDB()
 	// fmt.Println(jsonData)
 }
 
