@@ -1,6 +1,6 @@
 {
 	"database": {
-		"Dialect"      : "postgresql",
+		"Dialect"      : "postgres",
 		"Database"     : "automatic",
 		"User"	       : "automatic",
 		"Password"     : "123456",
