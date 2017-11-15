@@ -52,7 +52,7 @@ func  UserLogin(c *gin.Context) {
 func UserDetail(c *gin.Context){
 	c.JSON(http.StatusOK, gin.H{
 					"status_code": 200,
-					})
+	})
 }
 
 func GetUserByName(name string, passwd string) (int, error){
