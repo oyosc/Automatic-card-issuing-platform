@@ -52,6 +52,7 @@ func  UserLogin(c *gin.Context) {
 func UserDetail(c *gin.Context){
 	c.JSON(http.StatusOK, gin.H{
 					"status_code": 200,
+					"message": "获取用户详情",
 	})
 }
 
